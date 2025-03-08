@@ -6,16 +6,16 @@ if [ -f .env ]; then
 fi
 
 echo "🚀 Building Docker image..."
-docker build -t auto-pr-approver .
+docker build -t prception .
 
 echo "🛑 Stopping existing container..."
-docker stop auto-pr-approver || true
+docker stop prception || true
 
-docker rm auto-pr-approver || true
+docker rm prception || true
 
 echo "🚀 Starting container..."
-docker run -d --name auto-pr-approver -p 8081:8080 --env-file .env auto-pr-approver
+docker run -d --name prception -p 8081:8080 --env-file .env prception
 
 
 echo "📜 Logs:"
-docker logs -f auto-pr-approver
+docker logs -f prception

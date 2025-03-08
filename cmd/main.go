@@ -30,7 +30,7 @@ func main() {
 
 	http.HandleFunc("/webhook", api.HandleWebhook(token))
 
-	port := "8080"
+	port := ":8080"
 	log.Println("server listening on port: ", port)
 	if error := http.ListenAndServe(port, nil); error != nil {
 		log.Fatalf("failed to start server: %v", error)
