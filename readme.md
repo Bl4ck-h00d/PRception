@@ -10,6 +10,7 @@ PRception is a GitHub App that automates pull request reviews using AI-powered c
 ✅ **Context-Aware Feedback** – Provides line-by-line feedback based on code context  
 ✅ **Diff Analysis** – Analyzes PR diffs to detect issues and improvements  
 ✅ **Customizable Review Rules** – Define custom rules and quality standards  
+✅ **Chat with PRception** – Allows developers to ask follow-up questions directly in the PR comments and receive AI-powered responses. <br/>
 ✅ **Secure Authentication** – Uses GitHub App with JWT-based authentication  
 ✅ **Scalable** – Works seamlessly with large repositories and complex codebases  
 ✅ **Multi-Repo Support** – Supports reviewing across multiple repositories in an organization  
@@ -90,8 +91,20 @@ docker run -d -p 8080:8080 --env-file .env prception
 4. Intelligent review comments are posted directly on the PR
 5. If the code meets the defined standards, PRception automatically approves the PR
 
+## 💬 New! Chat Feature
+PRception now supports an interactive chat feature!
+
+Mention ```@prception``` in a PR comment **Reply** to ask follow-up questions about the code review.
+PRception will respond with context-aware answers based on the diff and file content.
+Example:
+```
+@prception Why is this loop inefficient?
+```
+
 
 ## 🏆 Example PR Feedback
 
 <img src="./assets/example.png" alt="GitHub Logo" width="600" height="500">
+<img src="./assets/example2.png" alt="GitHub Logo" width="600" height="500">
+
 
